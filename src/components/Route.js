@@ -58,14 +58,17 @@ function Route() {
                     // justifyContent: 'center',
                     // alignItems: 'center'
                     display: 'block',
-                    margin: '30px auto',
+                    margin: '24px auto',
                     width: '85%',
                     backgroundColor: '#dcdcdc',
                     fontWeight: 'bold'
-
+                    
                 }}      
                 >
             </input>
+            <button>
+                Маршрут
+            </button>
         </>
     );
 }

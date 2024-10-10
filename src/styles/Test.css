@@ -41,7 +41,8 @@
     display: inline-block;
     width: 100%;
     background-color: #2D3945;
-    height: 128px;
+    /* height: 128px; */
+    height: 180px;
     /* border-radius: 12px; */
 }
 
