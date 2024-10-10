@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Proxima-Nova-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.first_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #28828a;
+    font-family: 'Proxima Nova', sans-serif; /* Добавьте запасной шрифт */
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    /* height: 10%; */
+    padding: 0;
+    
+}
+
+
+.main_container {
+    display: flex; /* Используем Flexbox для расположения side_menu и third_div */
+}
+
+.second_div {
+    display: block;
+    background-color: #2D3945;
+    height: 448px;
+    width: 100%;
+    /* border-radius: 12px; */
+}
+
+.third_div {
+    width: 80%; /* Ширина третьего блока */
+    height: 576px;
+    /* background-color: blueviolet; */
+}
+
+.a_to_b {
+    display: inline-block;
+    width: 100%;
+    background-color: #2D3945;
+    height: 128px;
+    /* border-radius: 12px; */
+}
+
+.side_menu {
+    display: flex; /* Используем Flexbox для side_menu */
+    flex-direction: column; /* Элементы внутри side_menu будут располагаться вертикально */
+    width: 20%;
+    
+}
+
+h1, h2 {
+    color: white;
+    /* padding: 0; */
+}
+
+input, button {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.separator {
+    background-color: white;
+    padding: 2px;
+}
+
+/* #second_corpus:hover {
+    background-color: #2e3338;
+} */
+
+button {
+    background-color: #28828a;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #4e5b68;
+}
