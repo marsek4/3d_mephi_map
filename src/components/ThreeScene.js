@@ -242,6 +242,7 @@ function ThreeScene({ positions, animateCubes }) {
     };
 
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xffffff); // Белый цвет
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000);
     camera.position.set(0, 3, 5);
     scene.add(camera);
@@ -258,7 +259,7 @@ function ThreeScene({ positions, animateCubes }) {
 
     new RGBELoader()
       .setDataType(THREE.FloatType)
-      .load('sky.hdr', (texture) => {
+      .load('../sky.hdr', (texture) => {
         const envMap = pmremGenerator.fromEquirectangular(texture).texture;
         scene.environment = envMap;
         texture.dispose();
@@ -280,9 +281,28 @@ function ThreeScene({ positions, animateCubes }) {
       return cube;
     };
 
-    cubeRefs.current.cube2 = createCube([0.7, 0.05, 0.05], [-0.55, -1, 0.28], [0, Math.PI / 16, 0]);
-    cubeRefs.current.cube3 = createCube([0.57, 0.05, 0.05], [-0.985, -1, -0.04], [0, Math.PI / 2, 0]);
-    cubeRefs.current.cube4 = createCube([0.15, 0.05, 0.05], [-1.12, -1, -0.41], [0, 0, 0]);
+    // cubes for route from Г to В
+    cubeRefs.current.cube2 = createCube([0.7, 0.05, 0.05], [-0.55, -0.01, 0.28], [0, Math.PI / 16, 0]);
+    cubeRefs.current.cube3 = createCube([0.57, 0.05, 0.05], [-0.985, -0.01, -0.04], [0, Math.PI / 2, 0]);
+    cubeRefs.current.cube4 = createCube([0.15, 0.05, 0.05], [-1.12, -0.01, -0.41], [0, 0, 0]);
+
+    // cubes for route from Г to К
+    cubeRefs.current.cube2 = createCube([0.7, 0.05, 0.05], [0.55, -0.01, 0.28], [0, Math.PI - (Math.PI / 16), 0]);
+    cubeRefs.current.cube2 = createCube([0.57, 0.05, 0.05], [1.3, -0.01, 0.2], [0, Math.PI / 7, 0]);
+    cubeRefs.current.cube2 = createCube([0.5, 0.05, 0.05], [1.87, -0.01, 0.12], [0, -(Math.PI / 26), 0]);
+
+    //cubes for route from Г to НЛК
+    cubeRefs.current.cube2 = createCube([1.7, 0.05, 0.05], [-0.67, -0.01, -0.7], [0, -(Math.PI / 2), 0]);
+    //cube form Г
+
+    //cubes for route from Г to НЛК
+    cubeRefs.current.cube2 = createCube([0.8, 0.05, 0.05], [-1.1, -0.01, -1.1], [0, -(Math.PI / 5), 0]);
+    // cube
+
+    //cubes for route from Г to Э
+    cubeRefs.current.cube2 = createCube([1.2, 0.05, 0.05], [0.67, -0.01, -0.45], [0, -(Math.PI / 2), 0]);
+
+    
 
     const tick = () => {
       controls.update();

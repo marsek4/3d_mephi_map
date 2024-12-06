@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Test.css';
-import SearchDropdown from './components/menu';
+import SearchDropdown from './components/SearchDropdown';
 import ThreeScene from './components/ThreeScene';
 import Route from './components/Route';
 
@@ -37,7 +37,6 @@ function App() {
           </div>  
         </div>
         <div className='third_div'>
-          {/* Передаем состояние анимации и позиции в ThreeScene */}
           <ThreeScene positions={positions} animateCubes={animateCubes} />
         </div>
       </div>
